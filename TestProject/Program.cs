@@ -117,13 +117,22 @@
 
 
 int[] inventory = {200,450,700,175,250};
-int itemNumber = 1;
+int itemNumber = 0;
+int itemCount = 0;
+
 
 foreach(int items in inventory)
 {
-    Console.WriteLine($"Item {itemNumber}: {items}");
+
+    itemCount +=  items;
     itemNumber++;
+
+    Console.WriteLine($"Bin {itemNumber} = {items} items (Running total: {itemCount})");
+
+
 }
+
+    Console.WriteLine($"We Have {itemCount} Items In Stock");
 
 
 
